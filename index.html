@@ -1,39 +1,95 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ky">
 <head>
   <meta charset="UTF-8">
   <title>Расул & Айнура - Тойго чакыруу</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(to bottom, #fdf6f9, #ffe6eb);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+      color: #4d0039;
+      text-align: center;
     }
-    h1 { font-size: 2.5em; margin-top: 20px; color: #b30059; }
-    .timer { font-size: 1.5em; margin: 20px 0; color: #333; }
-    iframe { width: 90%; height: 300px; border: none; margin-top: 20px; }
-    .buttons { margin-top: 20px; }
-    .btn { display: inline-block; padding: 10px 20px; margin: 5px; font-size: 1.2em; border-radius: 10px; text-decoration: none; color: #fff; }
-    .yes { background: #28a745; } .no { background: #dc3545; }
+    .section { padding: 80px 20px; }
+    h1 { font-size: 3em; margin-bottom: 20px; }
+    h2 { font-size: 2em; margin-bottom: 20px; }
+    p { font-size: 1.3em; margin-bottom: 20px; }
+    .heart { font-size: 3em; color: #ff3366; margin: 10px; }
+    .flower { width: 80px; height: 80px; margin: 10px; display: inline-block; }
+    .timer { font-size: 1.5em; margin: 20px 0; font-weight: bold; }
+    .btn { display: inline-block; padding: 15px 25px; margin: 10px; font-size: 1.2em; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; }
+    .yes { background: #ff66a3; } .yes:hover { background: #ff3399; }
+    .no { background: #ff4d4d; } .no:hover { background: #cc0000; }
+    iframe { width: 90%; height: 300px; border: none; margin-top: 20px; border-radius: 15px; }
+    audio { margin-top: 20px; outline: none; }
+    .rsvp input { margin: 10px; padding: 10px; font-size: 1em; }
+    .rsvp label { font-size: 1.2em; display: block; margin: 5px; }
   </style>
 </head>
 <body>
-  <h1>💍 Расул & Айнура тоюна чакыруу</h1>
-  <p>📅 30-сентябрь ⏰ 18:00 🍽 Сейитбек рестораны, Куршаб</p>
-  <div class="timer" id="countdown"></div>
-  <h3>🎶 Сүйүү жөнүндө ыр коштоп турат</h3>
-  <audio controls autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Сиздин браузер аудиону колдобойт.
-  </audio>
-  <h3>📍 Локация</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.64789069744!2d72.350!3d40.633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdc9c123456789%3A0xabcdef123456789!2sСейитбек%20Рестораны%2C%20Куршаб!5e0!3m2!1sky!2skg!4v0000000000"></iframe>
-  <div class="buttons">
-    <a href="https://wa.me/996501208860?text=Тойго%20келем!" class="btn yes">✅ Келем</a>
-    <a href="https://wa.me/996501208860?text=Кечиресиз,%20тойго%20бара%20албайм" class="btn no">❌ Келбейм</a>
+
+  <!-- Header -->
+  <div class="section" style="background: #ffe6f0;">
+    <h1>💖 Расул & Айнура 💖</h1>
+    <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз!</p>
+    <div>
+      <span class="heart">💖</span>
+      <span class="heart">💖</span>
+      <span class="heart">💖</span>
+    </div>
+    <p>Сүйүү жана бактылуу учурлар сиз менен!</p>
   </div>
+
+  <!-- Date and Venue -->
+  <div class="section" style="background: #fff0f5;">
+    <h2>📅 30-сентябрь 2025</h2>
+    <p>⏰ 18:00, 🍽 Сейитбек рестораны, Куршаб, Өзгөн району</p>
+  </div>
+
+  <!-- Timer -->
+  <div class="section" style="background: #ffe6f0;">
+    <div class="timer" id="countdown"></div>
+  </div>
+
+  <!-- Music -->
+  <div class="section" style="background: #fff0f5;">
+    <h2>🎶 Музыка</h2>
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Сиздин браузер аудиону колдобойт.
+    </audio>
+  </div>
+
+  <!-- Location -->
+  <div class="section" style="background: #ffe6f0;">
+    <h2>📍 Локация</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.64789069744!2d72.350!3d40.633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdc9c123456789%3A0xabcdef123456789!2sСейитбек%20Рестораны%2C%20Куршаб!5e0!3m2!1sky!2skg!4v0000000000"></iframe>
+  </div>
+
+  <!-- Program -->
+  <div class="section" style="background: #fff0f5;">
+    <h2>📋 Программа</h2>
+    <p>17:30 — Конокторду чогултуу</p>
+    <p>18:00 — Салтанаттын башталышы</p>
+    <p>22:30 — Торт</p>
+  </div>
+
+  <!-- RSVP -->
+  <div class="section" style="background: #ffe6f0;">
+    <h2>📝 Анкета / RSVP</h2>
+    <div class="rsvp">
+      <label>ФИО: <input type="text" placeholder="Аты-жөнүңүздү жазыңыз"></label>
+      <label>Телефон: <input type="text" placeholder="+996 XXX XXX XXX"></label>
+      <label><input type="radio" name="rsvp" value="yes"> Келем</label>
+      <label><input type="radio" name="rsvp" value="with_partner"> Жубайым менен келем</label>
+      <label><input type="radio" name="rsvp" value="no"> Келе албайм</label>
+      <button class="btn yes">Жөнөтүү</button>
+    </div>
+  </div>
+
+  <!-- Countdown Script -->
   <script>
     var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
     var x = setInterval(function() {
@@ -47,5 +103,6 @@
       if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Той башталды!"; }
     }, 1000);
   </script>
+
 </body>
 </html>
