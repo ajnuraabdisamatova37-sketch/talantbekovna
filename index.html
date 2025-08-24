@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="ky">
 <head>
   <meta charset="UTF-8">
   <title>Расул & Айнура - Тойго чакыруу</title>
   <style>
     body {
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
       background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
-      color: #4d0039;
-      text-align: center;
+      color: #4d0039; text-align: center;
     }
-    .section { padding: 80px 20px; }
+    .section { padding: 80px 20px; position: relative; }
     h1 { font-size: 3em; margin-bottom: 20px; }
     h2 { font-size: 2em; margin-bottom: 20px; }
-    p { font-size: 1.3em; margin-bottom: 20px; }
-    .heart { font-size: 3em; color: #ff3366; margin: 10px; }
+    p { font-size: 1.3em; margin-bottom: 20px; line-height: 1.5; }
+    .heart { font-size: 3em; color: #ff3366; margin: 10px; animation: beat 1s infinite; }
+    @keyframes beat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
     .flower { width: 80px; height: 80px; margin: 10px; display: inline-block; }
     .timer { font-size: 1.5em; margin: 20px 0; font-weight: bold; }
-    .btn { display: inline-block; padding: 15px 25px; margin: 10px; font-size: 1.2em; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; }
+    .btn { display: inline-block; padding: 15px 25px; margin: 10px; font-size: 1.2em; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; cursor:pointer;}
     .yes { background: #ff66a3; } .yes:hover { background: #ff3399; }
     .no { background: #ff4d4d; } .no:hover { background: #cc0000; }
     iframe { width: 90%; height: 300px; border: none; margin-top: 20px; border-radius: 15px; }
     audio { margin-top: 20px; outline: none; }
-    .rsvp input { margin: 10px; padding: 10px; font-size: 1em; }
-    .rsvp label { font-size: 1.2em; display: block; margin: 5px; }
+    .rsvp input[type="text"], .rsvp input[type="tel"] { padding:10px; margin:5px; width:80%; font-size:1em; border-radius:10px; border:1px solid #ccc; }
+    .rsvp label { font-size: 1.2em; display:block; margin: 10px 0; }
   </style>
 </head>
 <body>
@@ -39,7 +42,7 @@
       <span class="heart">💖</span>
       <span class="heart">💖</span>
     </div>
-    <p>Сүйүү жана бактылуу учурлар сиз менен!</p>
+    <p>Сүйүү, бактылуу учурлар жана жылуу эскерүүлөр сиз менен болсун!</p>
   </div>
 
   <!-- Date and Venue -->
@@ -55,7 +58,7 @@
 
   <!-- Music -->
   <div class="section" style="background: #fff0f5;">
-    <h2>🎶 Музыка</h2>
+    <h2>🎶 Музыка - Lely: Моя душа</h2>
     <audio controls autoplay loop>
       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
       Сиздин браузер аудиону колдобойт.
@@ -81,7 +84,7 @@
     <h2>📝 Анкета / RSVP</h2>
     <div class="rsvp">
       <label>ФИО: <input type="text" placeholder="Аты-жөнүңүздү жазыңыз"></label>
-      <label>Телефон: <input type="text" placeholder="+996 XXX XXX XXX"></label>
+      <label>Телефон: <input type="tel" placeholder="+996 XXX XXX XXX"></label>
       <label><input type="radio" name="rsvp" value="yes"> Келем</label>
       <label><input type="radio" name="rsvp" value="with_partner"> Жубайым менен келем</label>
       <label><input type="radio" name="rsvp" value="no"> Келе албайм</label>
