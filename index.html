@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <title>Расул & Айнура - Тойго чакыруу</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #fdf6f9, #ffe6eb);
+      margin: 0;
+      padding: 0;
+    }
+    h1 { font-size: 2.5em; margin-top: 20px; color: #b30059; }
+    .timer { font-size: 1.5em; margin: 20px 0; color: #333; }
+    iframe { width: 90%; height: 300px; border: none; margin-top: 20px; }
+    .buttons { margin-top: 20px; }
+    .btn { display: inline-block; padding: 10px 20px; margin: 5px; font-size: 1.2em; border-radius: 10px; text-decoration: none; color: #fff; }
+    .yes { background: #28a745; } .no { background: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>💍 Расул & Айнура тоюна чакыруу</h1>
+  <p>📅 30-сентябрь ⏰ 18:00 🍽 Сейитбек рестораны, Куршаб</p>
+  <div class="timer" id="countdown"></div>
+  <h3>🎶 Сүйүү жөнүндө ыр коштоп турат</h3>
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Сиздин браузер аудиону колдобойт.
+  </audio>
+  <h3>📍 Локация</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.64789069744!2d72.350!3d40.633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdc9c123456789%3A0xabcdef123456789!2sСейитбек%20Рестораны%2C%20Куршаб!5e0!3m2!1sky!2skg!4v0000000000"></iframe>
+  <div class="buttons">
+    <a href="https://wa.me/996501208860?text=Тойго%20келем!" class="btn yes">✅ Келем</a>
+    <a href="https://wa.me/996501208860?text=Кечиресиз,%20тойго%20бара%20албайм" class="btn no">❌ Келбейм</a>
+  </div>
+  <script>
+    var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000*60*60*24));
+      var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+      var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+      var seconds = Math.floor((distance % (1000*60)) / 1000);
+      document.getElementById("countdown").innerHTML = "⏳ Тойго чейин: " + days + " күн " + hours + " саат " + minutes + " мүнөт " + seconds + " секунда калды.";
+      if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Той башталды!"; }
+    }, 1000);
+  </script>
+</body>
+      </html>
