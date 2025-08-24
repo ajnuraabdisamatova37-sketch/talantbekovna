@@ -1,16 +1,10 @@
 
-      <!DOCTYPE html>
-<html 
-<!-- Countdown -->
-<div class="section">
-  <div class="timer" id="countdown"></div>
-</div>
 <!DOCTYPE html>
-<html lang="ky">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Айнура & Расул - Тойго чакыруу</title>
+<title>Приглашение на свадьбу Расула & Айдан</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
   body {
@@ -18,6 +12,7 @@
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, #a0c4ff, #ffffff);
     color: #2d1a4a; text-align:center;
+    overflow-x: hidden;
   }
 
   .section {
@@ -28,11 +23,24 @@
     max-width: 800px;
     box-shadow: 0 0 40px rgba(0,0,0,0.15);
     transform: rotate(-1deg);
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
   }
 
-  h1 { font-family:'Dancing Script', cursive; font-size:4em; color:#ff3366; margin-bottom:10px; }
-  h2 { font-family:'Dancing Script', cursive; font-size:2.5em; color:#ff4d94; margin-bottom:15px; }
+  h1 { font-family:'Dancing Script', cursive; font-size:4em; color:#ff3366; margin-bottom:10px; animation: floatText 3s ease-in-out infinite alternate;}
+  h2 { font-family:'Dancing Script', cursive; font-size:2.5em; color:#ff4d94; margin-bottom:15px; animation: floatText 3s ease-in-out infinite alternate;}
   p { font-size:1.3em; line-height:1.6; margin-bottom:20px; }
+
+  @keyframes fadeInUp {
+    from { opacity:0; transform: translateY(50px) rotate(-1deg);}
+    to { opacity:1; transform: translateY(0px) rotate(-1deg);}
+  }
+
+  @keyframes floatText {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0px);}
+  }
 
   .heart { font-size:2.5em; color:#ff3366; animation:beat 1s infinite; display:inline-block; margin:5px; }
   @keyframes beat { 0%,100%{transform:scale(1);}50%{transform:scale(1.2);} }
@@ -48,15 +56,26 @@
   audio { margin-top:20px; outline:none; width:100%; border-radius:10px; }
   iframe { width:100%; height:300px; border:none; border-radius:15px; margin-top:20px; }
 
-  .timer { font-size:1.4em; font-weight:600; margin:15px 0; }
+  .timer { font-size:1.4em; font-weight:600; margin:15px 0; animation: pulse 1.5s infinite;}
+  @keyframes pulse {
+    0% {transform:scale(1);}
+    50% {transform:scale(1.05);}
+    100% {transform:scale(1);}
+  }
+
+  .rsvp input[type="text"], .rsvp input[type="tel"] { padding:10px; margin:5px; width:80%; max-width:400px; border-radius:10px; border:1px solid #ccc; font-size:1em; }
+  .rsvp label { display:block; margin:10px 0; font-size:1.2em; text-align:left; max-width:400px; margin:auto; }
+  .rsvp button { padding:12px 25px; font-size:1.2em; border-radius:50px; margin-top:15px; background:#ff66a3; color:white; font-weight:bold; border:none; cursor:pointer; }
+  .rsvp button:hover{ background:#ff3399; }
+
 </style>
 </head>
 <body>
 
 <!-- Header -->
 <div class="section">
-  <h1>Айнура & Расул</h1>
-  <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз 💖<br>Сиз менен бул бактылуу учурду бөлүшүүнү чыдамсыздык менен күтүп жатабыз!</p>
+  <h1>Расул & Айдан</h1>
+  <p>С уважением приглашаем вас на свадьбу наших детей. Мы будем искренне рады вашему присутствию в этот особенный день.</p>
   <div>
     <span class="heart">💖</span>
     <span class="heart">💖</span>
@@ -66,8 +85,8 @@
 
 <!-- Date & Venue -->
 <div class="section">
-  <h2>📅 30-сентябрь 2025</h2>
-  <p>⏰ 18:00, 🍽 Сейитбек рестораны, Куршаб, Өзгөн району</p>
+  <h2>📅 16-АВГУСТА 2025</h2>
+  <p>⏰ 18:00, 🍽 Ресторан "Динат", г. Ош, Микрорайон Анар</p>
 </div>
 
 <!-- Countdown -->
@@ -77,12 +96,12 @@
 
 <!-- Calendar -->
 <div class="section">
-  <h2>📆 Сентябрь</h2>
+  <h2>📆 Август</h2>
   <div class="calendar">
     <script>
-      for(let i=1;i<=30;i++){
-        if(i===29){
-          document.write('<div class="special">💖29</div>');
+      for(let i=1;i<=31;i++){
+        if(i===16){
+          document.write('<div class="special">❤️16</div>');
         } else {
           document.write('<div>'+i+'</div>');
         }
@@ -96,27 +115,40 @@
   <h2>🎶 Музыка</h2>
   <audio controls autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-    Сиздин браузер аудиону колдобойт.
+    Ваш браузер не поддерживает аудио.
   </audio>
 </div>
 
 <!-- Location -->
 <div class="section">
-  <h2>📍 Локация</h2>
+  <h2>📍 Посмотреть на карте</h2>
   <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A162300739773&source=constructor"></iframe>
 </div>
 
 <!-- Program -->
 <div class="section">
   <h2>📋 Программа</h2>
-  <p>17:30 — Конокторду чогултуу</p>
-  <p>18:00 — Салтанаттын башталышы</p>
+  <p>16:00 — Сбор гостей</p>
+  <p>18:00 — Начало торжества</p>
   <p>22:30 — Торт</p>
+</div>
+
+<!-- RSVP -->
+<div class="section">
+  <h2>📝 Анкета гостя</h2>
+  <div class="rsvp">
+    <label>Ваше имя и Фамилия: <input type="text" placeholder="Алибеков Арстан"></label>
+    <label>Телефон: <input type="tel" placeholder="+996 (999) 999-999"></label>
+    <label><input type="radio" name="rsvp" value="yes"> Приду</label>
+    <label><input type="radio" name="rsvp" value="with_partner"> Приду с парой</label>
+    <label><input type="radio" name="rsvp" value="no"> Не смогу прийти</label>
+    <button>Отправить</button>
+  </div>
 </div>
 
 <!-- Countdown Script -->
 <script>
-  var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
+  var countDownDate = new Date("Aug 16, 2025 18:00:00").getTime();
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -124,8 +156,8 @@
     var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
     var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
     var seconds = Math.floor((distance % (1000*60)) / 1000);
-    document.getElementById("countdown").innerHTML = "⏳ Тойго чейин: " + days + " күн " + hours + " саат " + minutes + " мүнөт " + seconds + " секунда калды.";
-    if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Той башталды!"; }
+    document.getElementById("countdown").innerHTML = "До торжества осталось: " + days + " дней " + hours + " часов " + minutes + " минут " + seconds + " секунд";
+    if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Торжество началось!"; }
   }, 1000);
 </script>
 
