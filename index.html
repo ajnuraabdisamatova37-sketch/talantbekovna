@@ -1,5 +1,11 @@
 
       <!DOCTYPE html>
+<html 
+<!-- Countdown -->
+<div class="section">
+  <div class="timer" id="countdown"></div>
+</div>
+<!DOCTYPE html>
 <html lang="ky">
 <head>
 <meta charset="UTF-8">
@@ -15,45 +21,42 @@
   }
 
   .section {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     margin:30px auto;
     padding:50px 20px;
     border-radius:25px;
-    max-width: 900px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    max-width: 800px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.15);
     transform: rotate(-1deg);
   }
 
-  h1 { font-family:'Dancing Script', cursive; font-size:4em; color:#ff3366; }
+  h1 { font-family:'Dancing Script', cursive; font-size:4em; color:#ff3366; margin-bottom:10px; }
   h2 { font-family:'Dancing Script', cursive; font-size:2.5em; color:#ff4d94; margin-bottom:15px; }
-  p { font-size:1.4em; line-height:1.6; margin-bottom:20px; }
-  .heart { font-size:3em; color:#ff3366; animation:beat 1s infinite; display:inline-block; margin:5px; }
-  @keyframes beat { 0%,100%{transform:scale(1);}50%{transform:scale(1.3);} }
+  p { font-size:1.3em; line-height:1.6; margin-bottom:20px; }
 
-  .timer { font-size:1.6em; font-weight:600; margin:20px 0; }
+  .heart { font-size:2.5em; color:#ff3366; animation:beat 1s infinite; display:inline-block; margin:5px; }
+  @keyframes beat { 0%,100%{transform:scale(1);}50%{transform:scale(1.2);} }
 
   .calendar { display:flex; flex-wrap:wrap; justify-content:center; margin-top:20px; }
   .calendar div {
-    width:40px; height:40px; line-height:40px; margin:3px;
+    width:35px; height:35px; line-height:35px; margin:3px;
     border-radius:50%; background:#fff; color:#2d1a4a; font-weight:bold;
-    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
   }
   .calendar .special { background:#ff3366; color:white; font-size:1.1em; }
 
-  .rsvp input[type="text"], .rsvp input[type="tel"] { padding:10px; margin:5px; width:80%; max-width:400px; border-radius:10px; border:1px solid #ccc; font-size:1em; }
-  .rsvp label { display:block; margin:10px 0; font-size:1.2em; text-align:left; max-width:400px; margin:auto; }
-  .rsvp button { padding:12px 25px; font-size:1.2em; border-radius:50px; margin-top:15px; background:#ff66a3; color:white; font-weight:bold; border:none; cursor:pointer; }
-  .rsvp button:hover{ background:#ff3399; }
-  iframe { width:100%; height:320px; border:none; border-radius:15px; margin-top:20px; }
   audio { margin-top:20px; outline:none; width:100%; border-radius:10px; }
+  iframe { width:100%; height:300px; border:none; border-radius:15px; margin-top:20px; }
+
+  .timer { font-size:1.4em; font-weight:600; margin:15px 0; }
 </style>
 </head>
 <body>
 
 <!-- Header -->
 <div class="section">
-  <h1>💖 Айнура & Расул 💖</h1>
-  <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз! <br>Сүйүү, бактылуу учурлар сиз менен болсун!</p>
+  <h1>Айнура & Расул</h1>
+  <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз 💖<br>Сиз менен бул бактылуу учурду бөлүшүүнү чыдамсыздык менен күтүп жатабыз!</p>
   <div>
     <span class="heart">💖</span>
     <span class="heart">💖</span>
@@ -90,7 +93,7 @@
 
 <!-- Music -->
 <div class="section">
-  <h2>🎶 Музыка - Кечки Бишкек</h2>
+  <h2>🎶 Музыка</h2>
   <audio controls autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
     Сиздин браузер аудиону колдобойт.
@@ -111,19 +114,6 @@
   <p>22:30 — Торт</p>
 </div>
 
-<!-- RSVP -->
-<div class="section">
-  <h2>📝 Анкета / RSVP</h2>
-  <div class="rsvp">
-    <label>ФИО: <input type="text" placeholder="Аты-жөнүңүздү жазыңыз"></label>
-    <label>Телефон: <input type="tel" placeholder="+996 XXX XXX XXX"></label>
-    <label><input type="radio" name="rsvp" value="yes"> Келем</label>
-    <label><input type="radio" name="rsvp" value="with_partner"> Жубайым менен келем</label>
-    <label><input type="radio" name="rsvp" value="no"> Келе албайм</label>
-    <button>Жөнөтүү</button>
-  </div>
-</div>
-
 <!-- Countdown Script -->
 <script>
   var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
@@ -140,4 +130,4 @@
 </script>
 
 </body>
-</html>
+      </html>
