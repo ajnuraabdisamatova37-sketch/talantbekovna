@@ -1,69 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Приглашение Айнура & Расул</title>
-<style>
-  /* Базовая стилизация */
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffe6f0, #ffccd5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    color: #800040;
-  }
-
-  .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(128, 0, 64, 0.4);
-    max-width: 400px;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 1em;
-    margin: 10px 0;
-  }
-
-  .highlight {
-    font-weight: bold;
-    color: #ff3366;
-  }
-
-  .timer {
-    font-size: 1.5em;
-    margin: 20px 0;
-    color: #cc0055;
-  }
-
-  .heart {
-    color: #ff3366;
-    font-size: 1.5em;
-    animation: pulse 1s infinite;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1); }
-  }
-</style>
-</head>
-<body>
-
-<div class="container">
+<<div class="container">
   <h1>💖 Айнура & Расул 💖</h1>
   <p>Дорогие наши! С огромной радостью приглашаем вас разделить с нами этот <span class="highlight">особенный день</span> — день нашей любви и счастья!</p>
   <p>Ваше присутствие, улыбки и тёплые слова сделают этот день ещё более незабываемым.</p>
@@ -71,13 +7,81 @@
   <p><span class="highlight">📅 Когда:</span> 29 сентября, 18:00</p>
   <p><span class="highlight">📍 Где:</span> Ресторан «Сеитбек», с. Куршаб, Ошская область</p>
 
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Приглашение Айнура & Расул</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+  }
+
+  .main-slide {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #800040;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .date {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #cc0055;
+  }
+
+  .heart {
+    font-size: 2em;
+    color: #cc0055;
+    animation: pulse 1s infinite;
+    margin-bottom: 20px;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+  .timer {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #800040;
+  }
+</style>
+</head>
+<body>
+
+<div class="main-slide">
+  <h1>WEDDING DAY</h1>
+  <h2>Расул & Айнура</h2>
+  <div class="date">29/09/25</div>
+  <div class="heart">❤️</div>
   <div class="timer" id="countdown"></div>
-  <p class="heart">❤️</p>
-  <p>Пусть этот день будет наполнен любовью, радостью и теплом.<br>Присоединяйтесь к нам и станьте частью этого чудесного момента!</p>
 </div>
 
 <script>
-  // Таймер
   const countdown = document.getElementById('countdown');
   const eventDate = new Date("September 29, 2025 18:00:00").getTime();
 
