@@ -2,171 +2,142 @@
       <!DOCTYPE html>
 <html lang="ky">
 <head>
-  <meta charset="UTF-8">
-  <title>Айнура & Расул - Тойго чакыруу</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #a0c4ff, #ffffff);
-      color: #2d1a4a; text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Айнура & Расул - Тойго чакыруу</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin:0; padding:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #a0c4ff, #ffffff);
+    color: #2d1a4a; text-align:center;
+  }
 
-    .overlay {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 60px 20px;
-      width: 90%;
-      max-width: 900px;
-      margin: 40px auto;
-      border-radius: 25px;
-      box-shadow: 0 0 50px rgba(0,0,0,0.2);
-      transform: rotate(-1deg);
-    }
+  .section {
+    background: rgba(255,255,255,0.9);
+    margin:30px auto;
+    padding:50px 20px;
+    border-radius:25px;
+    max-width: 900px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    transform: rotate(-1deg);
+  }
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 4em;
-      margin-bottom: 20px;
-      color: #ff3366;
-    }
+  h1 { font-family:'Dancing Script', cursive; font-size:4em; color:#ff3366; }
+  h2 { font-family:'Dancing Script', cursive; font-size:2.5em; color:#ff4d94; margin-bottom:15px; }
+  p { font-size:1.4em; line-height:1.6; margin-bottom:20px; }
+  .heart { font-size:3em; color:#ff3366; animation:beat 1s infinite; display:inline-block; margin:5px; }
+  @keyframes beat { 0%,100%{transform:scale(1);}50%{transform:scale(1.3);} }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.5em;
-      margin-bottom: 15px;
-      color: #ff4d94;
-    }
+  .timer { font-size:1.6em; font-weight:600; margin:20px 0; }
 
-    p {
-      font-size: 1.4em;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
+  .calendar { display:flex; flex-wrap:wrap; justify-content:center; margin-top:20px; }
+  .calendar div {
+    width:40px; height:40px; line-height:40px; margin:3px;
+    border-radius:50%; background:#fff; color:#2d1a4a; font-weight:bold;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  }
+  .calendar .special { background:#ff3366; color:white; font-size:1.1em; }
 
-    .heart { font-size: 3em; color: #ff3366; margin: 10px; animation: beat 1s infinite; display:inline-block; }
-    @keyframes beat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.3); } }
-
-    .timer { font-size: 1.6em; font-weight: 600; margin: 20px 0; }
-
-    .btn { display: inline-block; padding: 12px 25px; margin: 10px; font-size: 1.2em; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; cursor:pointer; }
-    .yes { background: #ff66a3; } .yes:hover { background: #ff3399; }
-    .no { background: #ff4d4d; } .no:hover { background: #cc0000; }
-
-    iframe { width: 100%; height: 320px; border: none; margin-top: 20px; border-radius: 15px; }
-
-    audio { margin-top: 20px; outline: none; }
-
-    .rsvp input[type="text"], .rsvp input[type="tel"] { padding:10px; margin:5px; width:80%; max-width:400px; font-size:1em; border-radius:10px; border:1px solid #ccc; }
-    .rsvp label { font-size: 1.2em; display:block; margin: 10px 0; text-align: left; max-width:400px; margin:auto; }
-    .rsvp button { margin-top:15px; }
-
-    .calendar {
-      display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;
-    }
-    .calendar div {
-      width: 40px; height: 40px; line-height: 40px; margin: 3px;
-      border-radius: 50%; background: #fff; color:#2d1a4a; font-weight:bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .calendar .special {
-      background: #ff3366; color:white; font-size:1.1em;
-    }
-
-  </style>
+  .rsvp input[type="text"], .rsvp input[type="tel"] { padding:10px; margin:5px; width:80%; max-width:400px; border-radius:10px; border:1px solid #ccc; font-size:1em; }
+  .rsvp label { display:block; margin:10px 0; font-size:1.2em; text-align:left; max-width:400px; margin:auto; }
+  .rsvp button { padding:12px 25px; font-size:1.2em; border-radius:50px; margin-top:15px; background:#ff66a3; color:white; font-weight:bold; border:none; cursor:pointer; }
+  .rsvp button:hover{ background:#ff3399; }
+  iframe { width:100%; height:320px; border:none; border-radius:15px; margin-top:20px; }
+  audio { margin-top:20px; outline:none; width:100%; border-radius:10px; }
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="overlay">
-    <h1>💖 Айнура & Расул 💖</h1>
-    <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз! <br>Сүйүү, бактылуу учурлар сиз менен болсун!</p>
-    <div>
-      <span class="heart">💖</span>
-      <span class="heart">💖</span>
-      <span class="heart">💖</span>
-    </div>
+<!-- Header -->
+<div class="section">
+  <h1>💖 Айнура & Расул 💖</h1>
+  <p>Биздин сүйүүбүздүн эң кереметтүү күнүңө чакырабыз! <br>Сүйүү, бактылуу учурлар сиз менен болсун!</p>
+  <div>
+    <span class="heart">💖</span>
+    <span class="heart">💖</span>
+    <span class="heart">💖</span>
   </div>
+</div>
 
-  <!-- Date and Venue -->
-  <div class="overlay">
-    <h2>📅 30-сентябрь 2025</h2>
-    <p>⏰ 18:00, 🍽 Сейитбек рестораны, Куршаб, Өзгөн району</p>
-  </div>
+<!-- Date & Venue -->
+<div class="section">
+  <h2>📅 30-сентябрь 2025</h2>
+  <p>⏰ 18:00, 🍽 Сейитбек рестораны, Куршаб, Өзгөн району</p>
+</div>
 
-  <!-- Countdown -->
-  <div class="overlay">
-    <div class="timer" id="countdown"></div>
-  </div>
+<!-- Countdown -->
+<div class="section">
+  <div class="timer" id="countdown"></div>
+</div>
 
-  <!-- Calendar -->
-  <div class="overlay">
-    <h2>📆 Сентябрь</h2>
-    <div class="calendar">
-      <!-- Days 1-30 -->
-      <script>
-        for(let i=1;i<=30;i++){
-          if(i===29){
-            document.write('<div class="special">💖29</div>');
-          } else {
-            document.write('<div>'+i+'</div>');
-          }
+<!-- Calendar -->
+<div class="section">
+  <h2>📆 Сентябрь</h2>
+  <div class="calendar">
+    <script>
+      for(let i=1;i<=30;i++){
+        if(i===29){
+          document.write('<div class="special">💖29</div>');
+        } else {
+          document.write('<div>'+i+'</div>');
         }
-      </script>
-    </div>
+      }
+    </script>
   </div>
+</div>
 
-  <!-- Music -->
-  <div class="overlay">
-    <h2>🎶 Музыка - Кечки Бишкек</h2>
-    <audio controls autoplay loop>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-      Сиздин браузер аудиону колдобойт.
-    </audio>
+<!-- Music -->
+<div class="section">
+  <h2>🎶 Музыка - Кечки Бишкек</h2>
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+    Сиздин браузер аудиону колдобойт.
+  </audio>
+</div>
+
+<!-- Location -->
+<div class="section">
+  <h2>📍 Локация</h2>
+  <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A162300739773&source=constructor"></iframe>
+</div>
+
+<!-- Program -->
+<div class="section">
+  <h2>📋 Программа</h2>
+  <p>17:30 — Конокторду чогултуу</p>
+  <p>18:00 — Салтанаттын башталышы</p>
+  <p>22:30 — Торт</p>
+</div>
+
+<!-- RSVP -->
+<div class="section">
+  <h2>📝 Анкета / RSVP</h2>
+  <div class="rsvp">
+    <label>ФИО: <input type="text" placeholder="Аты-жөнүңүздү жазыңыз"></label>
+    <label>Телефон: <input type="tel" placeholder="+996 XXX XXX XXX"></label>
+    <label><input type="radio" name="rsvp" value="yes"> Келем</label>
+    <label><input type="radio" name="rsvp" value="with_partner"> Жубайым менен келем</label>
+    <label><input type="radio" name="rsvp" value="no"> Келе албайм</label>
+    <button>Жөнөтүү</button>
   </div>
+</div>
 
-  <!-- Location -->
-  <div class="overlay">
-    <h2>📍 Локация</h2>
-    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A162300739773&source=constructor" width="100%" height="320" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <!-- Program -->
-  <div class="overlay">
-    <h2>📋 Программа</h2>
-    <p>17:30 — Конокторду чогултуу</p>
-    <p>18:00 — Салтанаттын башталышы</p>
-    <p>22:30 — Торт</p>
-  </div>
-
-  <!-- RSVP -->
-  <div class="overlay">
-    <h2>📝 Анкета / RSVP</h2>
-    <div class="rsvp">
-      <label>ФИО: <input type="text" placeholder="Аты-жөнүңүздү жазыңыз"></label>
-      <label>Телефон: <input type="tel" placeholder="+996 XXX XXX XXX"></label>
-      <label><input type="radio" name="rsvp" value="yes"> Келем</label>
-      <label><input type="radio" name="rsvp" value="with_partner"> Жубайым менен келем</label>
-      <label><input type="radio" name="rsvp" value="no"> Келе албайм</label>
-      <button class="btn yes">Жөнөтүү</button>
-    </div>
-  </div>
-
-  <!-- Countdown Script -->
-  <script>
-    var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000*60*60*24));
-      var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-      var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-      var seconds = Math.floor((distance % (1000*60)) / 1000);
-      document.getElementById("countdown").innerHTML = "⏳ Тойго чейин: " + days + " күн " + hours + " саат " + minutes + " мүнөт " + seconds + " секунда калды.";
-      if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Той башталды!"; }
-    }, 1000);
-  </script>
+<!-- Countdown Script -->
+<script>
+  var countDownDate = new Date("Sep 30, 2025 18:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000*60*60*24));
+    var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((distance % (1000*60)) / 1000);
+    document.getElementById("countdown").innerHTML = "⏳ Тойго чейин: " + days + " күн " + hours + " саат " + minutes + " мүнөт " + seconds + " секунда калды.";
+    if(distance < 0){ clearInterval(x); document.getElementById("countdown").innerHTML = "🎉 Той башталды!"; }
+  }, 1000);
+</script>
 
 </body>
-    </html>
+</html>
